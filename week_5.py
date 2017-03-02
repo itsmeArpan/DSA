@@ -79,7 +79,7 @@ while True:
         data[looser]['GW'] = data[looser]['GW'] + looser_score # Game won
         data[looser]['GL'] = data[looser]['GL'] + winner_score # Game lost
 
-sorted_keys = sorted(data, key=lambda x: (data[x]["B5W"],data[x]['B3W']))
+sorted_keys = sorted(data, key=lambda x: (data[x]["B5W"],data[x]['B3W'],data[x]["SW"],data[x]['GW']))
 count = len(sorted_keys)-1
 for keys in sorted_keys:
     i = sorted_keys[count]
